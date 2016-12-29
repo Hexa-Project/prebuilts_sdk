@@ -22,7 +22,7 @@ jack_server_jar := $(LOCAL_PATH)/jack-server-$(jack_server_version).jar
 ifneq ($(ANDROID_JACK_VM_ARGS),)
 jack_vm_args := $(ANDROID_JACK_VM_ARGS)
 else
-jack_vm_args := -Dfile.encoding=UTF-8 -XX:+TieredCompilation
+jack_vm_args := -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g
 endif
 available_jack_jars := $(wildcard $(LOCAL_PATH)/jacks/jack-*.jar)
 
